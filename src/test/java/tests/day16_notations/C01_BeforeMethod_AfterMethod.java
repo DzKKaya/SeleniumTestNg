@@ -1,16 +1,17 @@
-package day16_notations;
-
+package tests.day16_notations;
 import org.testng.annotations.Test;
 import utilities.TestBase;
 
-public class C03_Priority extends TestBase {
+public class C01_BeforeMethod_AfterMethod extends TestBase {
 
-
-    @Test (priority = -5)
+    // @BeforeMethod ve @AfterMethod  notasyonlari
+    // JUnit'deki @Before ve @After gibidir
+    // her test method'undan once ve sonra calisirlar
+    @Test
     public void amazonTesti() {
         driver.get("https://www.amazon.com");
     }
-    @Test (priority = -2)
+    @Test
     public void test02() {
         driver.get("https://www.bestbuy.com");
     }

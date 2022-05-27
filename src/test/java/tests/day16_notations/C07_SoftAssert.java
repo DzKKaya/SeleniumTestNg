@@ -1,4 +1,4 @@
-package day16_notations;
+package tests.day16_notations;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
@@ -36,23 +36,23 @@ public class C07_SoftAssert extends TestBase {
             select.selectByVisibleText("Eurozone (euro)");
             // 9. soft assert kullanarak "Eurozone (Euro)" secildigini test edin
             SoftAssert softAssert = new SoftAssert();
-            String secilenOption = select.getFirstSelectedOption().getText();
+            String actualOption = select.getFirstSelectedOption().getText();
             String expectedOption = "Eurozone (Euro)";
-            softAssert.assertEquals(secilenOption, expectedOption, "secilen option uygun degil");
+            softAssert.assertEquals(actualOption, expectedOption, "secilen option uygun degil");
             // 10. soft assert kullanarak DropDown listesinin su secenekleri oldugunu test edin "Select One",
         // "Australia (dollar)", "Canada (dollar)","Switzerland (franc)","China (yuan)","Denmark (krone)",
         // "Eurozone (euro)","Great Britain (pound)","Hong Kong (dollar)","Japan (yen)","Mexico (peso)",
         // "Norway (krone)","New Zealand (dollar)","Sweden (krona)","Singapore (dollar)","Thailand (baht)"
             List<WebElement> optionList = select.getOptions();
-            StringBuilder actualOptions = new StringBuilder(optionList.get(0).getText());
-            StringBuilder expectedOptions= new StringBuilder("Select One, Australia (dollar), Canada (dollar), Switzerland (franc), China (yuan), Denmark (krone), Eurozone (euro), Great Britain (pound), Hong Kong (dollar), Japan (yen), Mexico (peso), Norway (krone), New Zealand (dollar), Sweden (krona), Singapore (dollar), Thailand (baht)");
+            String actualOptions = optionList.get(0).getText();
+            String expectedOptions="Select One, Australia (dollar), Canada (dollar), Switzerland (franc), China (yuan), Denmark (krone), Eurozone (euro), Great Britain (pound), Hong Kong (dollar), Japan (yen), Mexico (peso), Norway (krone), New Zealand (dollar), Sweden (krona), Singapore (dollar), Thailand (baht)";
 
             for (int i = 1; i < optionList.size(); i++) {
 
-            actualOptions.append(", ").append(optionList.get(i).getText());
+            actualOptions+=", "+optionList.get(i).getText();
         }
         System.out.println(actualOptions);
-        softAssert.assertEquals(actualOptions.toString(),expectedOptions,"optionslar aynı degil");
+        softAssert.assertEquals(actualOptions, expectedOptions,"optionslar aynı degil");
 
         softAssert.assertAll();
         }
