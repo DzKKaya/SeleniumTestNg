@@ -1,10 +1,11 @@
-package pages;
+package tests.day17_pom;
 
 import com.github.javafaker.Faker;
 import org.openqa.selenium.Keys;
 import org.openqa.selenium.interactions.Actions;
 import org.testng.Assert;
 import org.testng.annotations.Test;
+import pages.FacebookPage;
 import utilities.Driver;
 
 public class C03_PageClassKullanimi {
