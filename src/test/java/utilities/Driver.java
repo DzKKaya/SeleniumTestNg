@@ -18,14 +18,14 @@ public class Driver {
  driver olusturup, ilgili ayarlarin yapilmasi
  ve en sonda driver'in kapatilmasi tercih edilmistir.
   */
+
+    private Driver(){
+
+    }
     static WebDriver driver;
     public static WebDriver getDriver(){
         if (driver==null) {
             switch (ConfigReader.getProperty("browser")){
-                case "chrome" :
-                    WebDriverManager.chromedriver().setup();
-                    driver = new ChromeDriver();
-                    break;
                 case "safari" :
                     WebDriverManager.safaridriver().setup();
                     driver=new SafariDriver();
@@ -42,6 +42,7 @@ public class Driver {
                     WebDriverManager.chromedriver().setup();
                     driver = new ChromeDriver();
             }
+
             driver.manage().window().maximize();
             driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(15));
         }
