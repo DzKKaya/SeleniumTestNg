@@ -12,10 +12,10 @@ import utilities.Driver;
 import java.time.Duration;
 
 public class NegativeLoginTest {
-
+    BrcPage brcPage;
     @Test
     public void wrongPassword() {
-        BrcPage brcPage=new BrcPage();
+        brcPage=new BrcPage();
 
         // Bir test method olustur positiveLoginTest()
         // https://www.bluerentalcars.com/ adresine git
@@ -40,7 +40,7 @@ public class NegativeLoginTest {
 
     @Test(dependsOnMethods = "wrongEmailAndPassword")
     public void wrongEmail() {
-        BrcPage brcPage=new BrcPage();
+        brcPage=new BrcPage();
         Driver.getDriver().get(ConfigReader.getProperty("brcUrl"));
         // login butonuna bas
         brcPage.firstLoginButton.click();
@@ -62,7 +62,7 @@ public class NegativeLoginTest {
     @Test (dependsOnMethods = "wrongPassword")
     public void wrongEmailAndPassword() {
 
-        BrcPage brcPage=new BrcPage();
+        brcPage=new BrcPage();
         Driver.getDriver().get(ConfigReader.getProperty("brcUrl"));
         // login butonuna bas
         brcPage.firstLoginButton.click();

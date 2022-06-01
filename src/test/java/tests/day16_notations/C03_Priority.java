@@ -14,7 +14,7 @@ public class C03_Priority extends TestBase {
     public void test02() {
         driver.get("https://www.bestbuy.com");
     }
-    @Test
+    @Test(groups = "grup1")//xml dosyasında kullanmak için groups atributi verdik
     public void techproedTesti() {
         driver.get("https://www.techproeducation.com");
     }

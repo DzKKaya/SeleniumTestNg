@@ -9,7 +9,7 @@ import org.testng.asserts.SoftAssert;
 import utilities.TestBase;
 
 public class C06_SoftAssert extends TestBase {
-    @Test
+    @Test(groups = "grup2")//xml dosyasında kullanmak için groups atributi verdik
     public void test01() {
         /*
           Softassertion baslangic ve bitis satirlari arasindaki
