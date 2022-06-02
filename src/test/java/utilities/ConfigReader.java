@@ -7,6 +7,8 @@ import java.util.Properties;
 
 public class ConfigReader {
 
+    private ConfigReader() {
+    }
 
     public static Properties properties;
 
