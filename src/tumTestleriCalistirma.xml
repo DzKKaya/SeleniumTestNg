@@ -2,7 +2,7 @@
 <suite name="tum testleri calistirma">
     <test name="tum testler">
         <packages>
-            <package name="tests.*"></package>
+            <package name="practice.*"></package>
         </packages>
     </test>
 </suite>

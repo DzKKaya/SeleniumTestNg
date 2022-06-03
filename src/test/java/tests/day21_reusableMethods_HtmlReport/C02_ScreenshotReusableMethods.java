@@ -14,6 +14,5 @@ public class C02_ScreenshotReusableMethods {
         Driver.getDriver().get(ConfigReader.getProperty("amazonUrl"));
         ReusableMethods.getScreenshot("amazon");
 
-
     }
 }
