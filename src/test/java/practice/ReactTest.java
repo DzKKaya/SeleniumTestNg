@@ -5,13 +5,12 @@ import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
 import org.testng.annotations.Test;
-import pages.ReactPage;
+import practicePage.ReactPage;
 import utilities.ConfigReader;
 import utilities.Driver;
 
 import java.text.DecimalFormat;
 import java.util.ArrayList;
-import java.util.Formatter;
 import java.util.List;
 import java.util.Random;
 

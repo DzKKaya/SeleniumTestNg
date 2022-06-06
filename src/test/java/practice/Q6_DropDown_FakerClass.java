@@ -1,4 +1,4 @@
-package practice4;
+package practice;
 
 import com.github.javafaker.Faker;
 import org.openqa.selenium.By;

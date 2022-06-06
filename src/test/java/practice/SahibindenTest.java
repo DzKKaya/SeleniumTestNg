@@ -2,7 +2,7 @@ package practice;
 
 import org.openqa.selenium.JavascriptExecutor;
 import org.testng.annotations.Test;
-import pages.SahibindenPage;
+import practicePage.SahibindenPage;
 import utilities.Driver;
 
 import java.util.ArrayList;
